@@ -84,7 +84,7 @@ the constant <code>26</code> by <code>30</code>, <code>30</code>,<code>30</code>
 <h3 id="command-lines-to-generate-the-objects-forest-forest0-and-tree-objects-used-in-the-experiment-of-decomposition-method">Command lines to generate the objects forest, forest0 and tree objects used in the experiment of decomposition method</h3>
 <h4 id="dependencies">Dependencies</h4>
 <blockquote>
-<p>The programs <a href="https://www.python.org/downloads/"><code>python3</code></a> should be installed.</p>
+<p>The programs <a href="https://www.python.org/downloads/"><code>python3</code></a> and SICStus Prolog (version 4.6.0 or a more recent version) should be installed.</p>
 </blockquote>
 <h4 id="preparation-for-running-the-files-to-generate-the-combinatorials-objects.">Preparation for running the files to generate the combinatorials objects.</h4>
 <blockquote>
@@ -92,10 +92,14 @@ the constant <code>26</code> by <code>30</code>, <code>30</code>,<code>30</code>
 </blockquote>
 <h3 id="running-the-program-to-generate-the-combinatorial-objects">Running the program to generate the combinatorial objects</h3>
 <blockquote>
-<p>To generate the combinatorial object <strong>forest</strong>, <strong>forest0</strong>, or <strong>tree</strong>, you just need  to respectively run in the Terminal from the repository <strong>generate_data_forest_AAAI24</strong> the scripts below:<br>
+<ol>
+<li>From the terminal  and inside the  directory <strong>generate_data_forest_AAAI24</strong>   run SICStus Prolog (version 4.6.0 or a more recent version) with the following command to generate appropriate directories for data:<br>
+<code>| ?- [gen_data_directory], gen_directory, halt.</code></li>
+<li>Then to generate the combinatorial object <em>forest</em>, <em>forest0</em>, or <em>tree</em>, you just need  to respectively run in the Terminal from the repository <strong>generate_data_forest_AAAI24</strong> the scripts below:<br>
 <code>python3 gen_forest.py maximum_size_of_the_combinatorial_object</code><br>
 <code>python3 gen_forest0.py maximum_size_of_the_combinatorial_object</code><br>
-<code>python3 gen_tree.py maximum_size_of_the_combinatorial_object</code></p>
+<code>python3 gen_tree.py maximum_size_of_the_combinatorial_object</code></li>
+</ol>
 </blockquote>
 <h3 id="results-of-running-the-scripts-above">Results of running the scripts above</h3>
 <blockquote>
@@ -112,7 +116,7 @@ Then you copy those directories <strong>forest, forest0, tree</strong> in the <s
 <li>Then open in edit option the code file <code>main.pl</code>  of the version of Bound Seeker code files <strong>which  do not use</strong> decomposition methods. At line number 608, change the name of the directory inside brackets <code>'data/',KindCombi,/found_conjectures_',FilesOutSuffix,'.pl'</code> by the name <code>'data6_00_wo_decomp/', KindCombi,'/found_conjectures_', FilesOutSuffix,'.pl'</code>.<br>
 Then record and close the file.</li>
 <li>From the terminal of cluster and inside the same directory of the file <code>main.pl</code>   run SICStus Prolog (version 4.6.0 or a more recent version)  with the following command to launch the experiments:<br>
-<code>| ?- [run_on_cluster], submit_job('6_00_wo_decomp'), halt.</code></li>
+<code>| ?- [run_on_cluster], gen_tache('6_00_wo_decomp'), submit_job('6_00_wo_decomp'), halt.</code></li>
 </ol>
 </blockquote>
 <p>After launching the command above, <strong>510  jobs</strong> (a job is to find sharp bounds on a group of data bound table of the same characteristic of the same combinatorial object) to find sharp bounds <strong>without the decomposition methods</strong> will be launched where the maximum time of running is <strong>one week</strong>.</p>
@@ -138,7 +142,7 @@ Then record and close the file.</li>
 <li>Upload the files <code>run_on_cluster.pl, cmds_for_maps.pl</code> and the directory <strong>data6_00_w_decomp</strong> in the same directory that contains the file <code>main.pl</code> of the version of Bound Seeker code files <strong>which  use</strong> decomposition methods and that you previously uploaded on the cluster of Digital Research Alliance of Canada.</li>
 <li>Then open in edit option the code file <code>main.pl</code>  of the version of Bound Seeker code files <strong>which  use</strong> decomposition methods. At line number 608, change the name of the directory inside brackets <code>'data/',KindCombi,/found_conjectures_',FilesOutSuffix,'.pl'</code> by the name <code>'data6_00_w_decomp/', KindCombi,'/found_conjectures_', FilesOutSuffix,'.pl'</code>. Then record and close the file.</li>
 <li>From the terminal of cluster and inside the same directory of the file <code>main.pl</code>   run SICStus Prolog (version 4.6.0 or a more recent version)  with the following command to launch the experiments:<br>
-<code>| ?- [run_on_cluster], submit_job('6_00_w_decomp'), halt.</code></li>
+<code>| ?- [run_on_cluster], gen_tache('6_00_w_decomp'), submit_job('6_00_w_decomp'), halt.</code></li>
 </ol>
 </blockquote>
 <p>After launching the command above, <strong>510  jobs</strong> (a job is to find sharp bounds on a group of data bound table of the same characteristic of the same combinatorial object) to find sharp bounds without the decomposition methods will be launched where the maximum time of running is <strong>one week.</strong></p>

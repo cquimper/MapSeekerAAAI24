@@ -24,6 +24,104 @@ soumettre_jobs(NumJobsGroup,ResultsVersion):-
 	fail.
 soumettre_jobs(_,_).
 
+
+gen_tache(ResultsVersion):-
+    make_dir_all_objs(ResultsVersion),
+    atoms_concat(['maps_to_run_',ResultsVersion,'.pl'],MapsToRunFile),
+    consult(MapsToRunFile),
+    assert(jobIDG(0)),
+    job_to_run(IDG0,TimeGroupJob,Jobs),
+    \+ Jobs = [],
+    jobIDG(IDG00),
+    retract(jobIDG(IDG00)),
+    IDG is IDG00 + 1,
+    assert(jobIDG(IDG)),
+    (IDG0 = to_split -> Hours = 96, Minutes = 00,
+                      compute_num_threads(Jobs,0,NumThreads)
+                      ;
+                        Hours is TimeGroupJob div 60,
+                        Minutes is TimeGroupJob mod 60,
+                        length(Jobs,NumThreads)
+     ),
+    atoms_concat(['data',ResultsVersion,'/jobs_',IDG],DirJobGroup),
+    make_directory(DirJobGroup),
+    atoms_concat([DirJobGroup,'/obj_map_id_times_rksplit_',IDG,'.pl'],ObjMapIdTimesRksplit),
+    open(ObjMapIdTimesRksplit,write,StreamJ),
+    format(StreamJ,':- multifile obj_map_id_times_rksplit/5.~n',[]),
+    format(StreamJ,':- dynamic obj_map_id_times_rksplit/5.~n~n',[]),
+    format(StreamJ,' %obj_map_id_times_rksplit(Obj,Bound,JobID,NumTimes,RankSplit)~n~n',[]),
+    atoms_concat([DirJobGroup,'/job_group_',IDG,'.sh'],JobGroupFile),
+    atoms_concat([DirJobGroup,'/threads_',IDG,'.tex'], ThreadsJobGroupFile),
+    open(ThreadsJobGroupFile,write,Stream),
+    gen_threads_job_group_file(IDG0,1,1,Jobs,Stream,StreamJ),
+    close(Stream),
+    close(StreamJ),
+    open(JobGroupFile,write,Sout),
+    format(Sout,'#!/bin/bash~n',[]),
+    format(Sout,'#SBATCH --time=~w:~w:00~n',[Hours, Minutes]),
+    format(Sout,'#SBATCH --account=def-cquimper~n',[]),
+    format(Sout,'#SBATCH --mem-per-cpu=10G~n',[]),
+    format(Sout,'#SBATCH --array=1-~w~n',[NumThreads]),
+    format(Sout,'#SBATCH --output=data~w/jobs_~w/job_%a.out~n',[ResultsVersion,IDG]),
+    format(Sout,'eval ./gen_paralle_conj.sh `awk "NR==$SLURM_ARRAY_TASK_ID" ~w`~n',[ThreadsJobGroupFile]),
+    close(Sout),
+    fail.
+
+gen_tache(ResultsVersion):-
+atoms_concat(['cp maps_to_run_',ResultsVersion,'.pl data',ResultsVersion],BashCommand),
+process_create(path(sh),['-c', BashCommand], [wait(exit(0))]),
+retractall(job_to_run(_,_,_)).
+
+
+make_dir_all_objs(ResultsVersion):-
+combojects(Objs),
+atoms_concat(['data',ResultsVersion],KeepingDirResults),
+make_directory(KeepingDirResults),
+consult('cmds_for_maps.pl'),
+member(Obj,Objs),
+atoms_concat([KeepingDirResults,'/',Obj,'_v',ResultsVersion],FinalDirResultObj),
+make_directory(FinalDirResultObj),
+atoms_concat([KeepingDirResults,'/',Obj],InterDirResultObj),
+make_directory(InterDirResultObj),
+atoms_concat([KeepingDirResults,'/',Obj,'/conjectures_',Obj],ConjDir),
+make_directory(ConjDir),
+atoms_concat([KeepingDirResults,'/',Obj,'/trace_',Obj],TraceDir),
+make_directory(TraceDir),
+obj_map(_,Obj,Att,LowUp),
+atoms_concat([KeepingDirResults,'/',Obj,'/',LowUp,'_',Att],BoundDir),
+make_directory(BoundDir),
+fail.
+
+make_dir_all_objs(_):-
+retractall(obj_map(_,_,_,_)).
+
+compute_num_threads([],NumThreads,NumThreads):-!.
+compute_num_threads([jtr(_,_,_,NumTimes)|R],NumThreads0,NumThreads):-
+NumThreads1 is NumThreads0 + NumTimes,
+compute_num_threads(R,NumThreads1,NumThreads).
+
+
+gen_threads_job_group_file(_,_,_,[],_,_):-!.
+gen_threads_job_group_file(IDG0,J,I,[Job|R],Stream,StreamJ):-
+(IDG0 = to_split -> Job = jtr(Obj,Bound,Cmd,NumTimes),
+                    write_treads(Stream,J,1,Cmd,NumTimes,Obj,Bound,StreamJ,Js);
+                    Job = jtr(Obj,Bound,Cmd0,NumTimes,RankSplit),
+                    atoms_concat(['\'',Cmd0,'(1,3,',NumTimes,',',RankSplit,').\''],Cmd),
+                    format(Stream,'~w~n',[Cmd]),
+                    format(StreamJ,'obj_map_id_times_rksplit(~w,~w,~w,~w,~w).~n',[Obj,Bound,I,NumTimes,RankSplit])
+ ),I1 is I + 1,
+gen_threads_job_group_file(IDG0,Js,I1,R,Stream,StreamJ).
+
+write_treads(_,J,I,_,Times,_,_,_,J):-I > Times,!.
+write_treads(Stream,J,I,Cmd0,Times,Obj,Bound,StreamJ,Jsplits):-
+    atoms_concat(['\'',Cmd0,'(1,3,',Times,',',I,').\''],Cmd),
+    format(Stream,'~w~n',[Cmd]),
+    I1 is I + 1,
+    J1 is J + 1,
+    format(StreamJ,'obj_map_id_times_rksplit(~w,~w,~w,~w,~w).~n',[Obj,Bound,J,Times,I]),
+    write_treads(Stream,J1,I1,Cmd0,Times,Obj,Bound,StreamJ,Jsplits).
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
      %%%%%                    RECUPERATION DES RESULTATS CALCUL CANADA
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -201,104 +299,7 @@ write_conjecture_file_header(Sout) :-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GENERATE JOB TO DO %%%%%%%%%%%%%%%%%%%%%
 
-gt0:-
-%ResultsVersion = '_test_1_poly_cond',
-ResultsVersion = '6_00_w_decomp',
-gen_tache(ResultsVersion).
 
-gen_tache(ResultsVersion):-
-    make_dir_all_objs(ResultsVersion),
-    atoms_concat(['maps_to_run_',ResultsVersion,'.pl'],MapsToRunFile),
-    consult(MapsToRunFile),
-    assert(jobIDG(0)),
-    job_to_run(IDG0,TimeGroupJob,Jobs),
-    \+ Jobs = [],
-    jobIDG(IDG00),
-    retract(jobIDG(IDG00)),
-    IDG is IDG00 + 1,
-    assert(jobIDG(IDG)),
-    (IDG0 = to_split -> Hours = 96, Minutes = 00,
-                      compute_num_threads(Jobs,0,NumThreads)
-                      ;
-                        Hours is TimeGroupJob div 60,
-                        Minutes is TimeGroupJob mod 60,
-                        length(Jobs,NumThreads)
-     ),
-    atoms_concat(['data',ResultsVersion,'/jobs_',IDG],DirJobGroup),
-    make_directory(DirJobGroup),
-    atoms_concat([DirJobGroup,'/obj_map_id_times_rksplit_',IDG,'.pl'],ObjMapIdTimesRksplit),
-    open(ObjMapIdTimesRksplit,write,StreamJ),
-    format(StreamJ,':- multifile obj_map_id_times_rksplit/5.~n',[]),
-    format(StreamJ,':- dynamic obj_map_id_times_rksplit/5.~n~n',[]),
-    format(StreamJ,' %obj_map_id_times_rksplit(Obj,Bound,JobID,NumTimes,RankSplit)~n~n',[]),
-    atoms_concat([DirJobGroup,'/job_group_',IDG,'.sh'],JobGroupFile),
-    atoms_concat([DirJobGroup,'/threads_',IDG,'.tex'], ThreadsJobGroupFile),
-    open(ThreadsJobGroupFile,write,Stream),
-    gen_threads_job_group_file(IDG0,1,1,Jobs,Stream,StreamJ),
-    close(Stream),
-    close(StreamJ),
-    open(JobGroupFile,write,Sout),
-    format(Sout,'#!/bin/bash~n',[]),
-    format(Sout,'#SBATCH --time=~w:~w:00~n',[Hours, Minutes]),
-    format(Sout,'#SBATCH --account=def-cquimper~n',[]),
-    format(Sout,'#SBATCH --mem-per-cpu=10G~n',[]),
-    format(Sout,'#SBATCH --array=1-~w~n',[NumThreads]),
-    format(Sout,'#SBATCH --output=data~w/jobs_~w/job_%a.out~n',[ResultsVersion,IDG]),
-    format(Sout,'eval ./gen_paralle_conj.sh `awk "NR==$SLURM_ARRAY_TASK_ID" ~w`~n',[ThreadsJobGroupFile]),
-    close(Sout),
-    fail.
-
-gen_tache(_):-
-retractall(job_to_run(_,_,_)).
-
-
-make_dir_all_objs(ResultsVersion):-
-combojects(Objs),
-atoms_concat(['data',ResultsVersion],KeepingDirResults),
-make_directory(KeepingDirResults),
-consult('cmds_for_maps.pl'),
-member(Obj,Objs),
-atoms_concat([KeepingDirResults,'/',Obj,'_v',ResultsVersion],FinalDirResultObj),
-make_directory(FinalDirResultObj),
-atoms_concat([KeepingDirResults,'/',Obj],InterDirResultObj),
-make_directory(InterDirResultObj),
-atoms_concat([KeepingDirResults,'/',Obj,'/conjectures_',Obj],ConjDir),
-make_directory(ConjDir),
-atoms_concat([KeepingDirResults,'/',Obj,'/trace_',Obj],TraceDir),
-make_directory(TraceDir),
-obj_map(_,Obj,Att,LowUp),
-atoms_concat([KeepingDirResults,'/',Obj,'/',LowUp,'_',Att],BoundDir),
-make_directory(BoundDir),
-fail.
-
-make_dir_all_objs(_):-
-retractall(obj_map(_,_,_,_)).
-
-compute_num_threads([],NumThreads,NumThreads):-!.
-compute_num_threads([jtr(_,_,_,NumTimes)|R],NumThreads0,NumThreads):-
-NumThreads1 is NumThreads0 + NumTimes,
-compute_num_threads(R,NumThreads1,NumThreads).
-
-
-gen_threads_job_group_file(_,_,_,[],_,_):-!.
-gen_threads_job_group_file(IDG0,J,I,[Job|R],Stream,StreamJ):-
-(IDG0 = to_split -> Job = jtr(Obj,Bound,Cmd,NumTimes),
-                    write_treads(Stream,J,1,Cmd,NumTimes,Obj,Bound,StreamJ,Js);
-                    Job = jtr(Obj,Bound,Cmd0,NumTimes,RankSplit),
-                    atoms_concat(['\'',Cmd0,'(1,3,',NumTimes,',',RankSplit,').\''],Cmd),
-                    format(Stream,'~w~n',[Cmd]),
-                    format(StreamJ,'obj_map_id_times_rksplit(~w,~w,~w,~w,~w).~n',[Obj,Bound,I,NumTimes,RankSplit])
- ),I1 is I + 1,
-gen_threads_job_group_file(IDG0,Js,I1,R,Stream,StreamJ).
-
-write_treads(_,J,I,_,Times,_,_,_,J):-I > Times,!.
-write_treads(Stream,J,I,Cmd0,Times,Obj,Bound,StreamJ,Jsplits):-
-    atoms_concat(['\'',Cmd0,'(1,3,',Times,',',I,').\''],Cmd),
-    format(Stream,'~w~n',[Cmd]),
-    I1 is I + 1,
-    J1 is J + 1,
-    format(StreamJ,'obj_map_id_times_rksplit(~w,~w,~w,~w,~w).~n',[Obj,Bound,J,Times,I]),
-    write_treads(Stream,J1,I1,Cmd0,Times,Obj,Bound,StreamJ,Jsplits).
 
 
 

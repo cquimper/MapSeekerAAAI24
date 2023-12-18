@@ -65,7 +65,7 @@ the constant `26` by `30`, `30`,`30` and `30`.
 
 #### Dependencies
 
-> The programs [`python3`](https://www.python.org/downloads/) should be installed.
+> The programs [`python3`](https://www.python.org/downloads/) and SICStus Prolog (version 4.6.0 or a more recent version) should be installed.
 
 
 #### Preparation for running the files to generate the combinatorials objects.
@@ -78,9 +78,9 @@ the constant `26` by `30`, `30`,`30` and `30`.
 
 ### Running the program to generate the combinatorial objects
 
-  
-
-> To generate the combinatorial object __forest__, __forest0__, or __tree__, you just need  to respectively run in the Terminal from the repository __generate_data_forest_AAAI24__ the scripts below:
+  >1.  From the terminal  and inside the  directory __generate_data_forest_AAAI24__   run SICStus Prolog (version 4.6.0 or a more recent version) with the following command to generate appropriate directories for data:  
+    `| ?- [gen_data_directory], gen_directory, halt.`
+>2. Then to generate the combinatorial object _forest_, _forest0_, or _tree_, you just need  to respectively run in the Terminal from the repository __generate_data_forest_AAAI24__ the scripts below:
 `python3 gen_forest.py maximum_size_of_the_combinatorial_object`
 `python3 gen_forest0.py maximum_size_of_the_combinatorial_object`
 `python3 gen_tree.py maximum_size_of_the_combinatorial_object`
@@ -110,7 +110,7 @@ To reproduce the test performed on the clusters of  Digital Research Alliance of
 >3. Then open in edit option the code file `main.pl`  of the version of Bound Seeker code files **which  do not use** decomposition methods. At line number 608, change the name of the directory inside brackets `'data/',KindCombi,/found_conjectures_',FilesOutSuffix,'.pl'` by the name `'data6_00_wo_decomp/', KindCombi,'/found_conjectures_', FilesOutSuffix,'.pl'`. 
 >Then record and close the file.
 >4. From the terminal of cluster and inside the same directory of the file `main.pl`   run SICStus Prolog (version 4.6.0 or a more recent version)  with the following command to launch the experiments:
-`| ?- [run_on_cluster], submit_job('6_00_wo_decomp'), halt.`
+`| ?- [run_on_cluster], gen_tache('6_00_wo_decomp'), submit_job('6_00_wo_decomp'), halt.`
 
   
 
@@ -151,7 +151,7 @@ where **name_of_the_combinatorial_object** is one of the following names of obje
 >2. Upload the files `run_on_cluster.pl, cmds_for_maps.pl` and the directory **data6_00_w_decomp** in the same directory that contains the file `main.pl` of the version of Bound Seeker code files **which  use** decomposition methods and that you previously uploaded on the cluster of Digital Research Alliance of Canada.
 >3. Then open in edit option the code file `main.pl`  of the version of Bound Seeker code files **which  use** decomposition methods. At line number 608, change the name of the directory inside brackets `'data/',KindCombi,/found_conjectures_',FilesOutSuffix,'.pl'` by the name `'data6_00_w_decomp/', KindCombi,'/found_conjectures_', FilesOutSuffix,'.pl'`. Then record and close the file.
 >4. From the terminal of cluster and inside the same directory of the file `main.pl`   run SICStus Prolog (version 4.6.0 or a more recent version)  with the following command to launch the experiments:
-`| ?- [run_on_cluster], submit_job('6_00_w_decomp'), halt.`
+`| ?- [run_on_cluster], gen_tache('6_00_w_decomp'), submit_job('6_00_w_decomp'), halt.`
 
   
 

@@ -1,0 +1,2915 @@
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_max of 20
+--------------------------------------------------------------------------------
+--> consult low_n_m_max
+
+Cost =  1:  max >= (n cdiv m)
+<-- reclaim low_n_m_max
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,1,0,0,0,0,0))
+Number of lower bounds:                                             t(0,1,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	0m18.117s
+user	0m13.790s
+sys	0m0.194s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_min_max of 13
+--------------------------------------------------------------------------------
+--> consult low_n_m_min_max
+else runtime: 331763ms. else cost: 4
+else runtime: 337954ms. else cost: 4
+Cost =  6:  range = ([n=m.min] ? 0 : (-m.min + n) cdiv (m - 1)) % NEW DECOMP
+Cost =  2:  rmin  = -m.min + n
+----------
+
+Cost =  7:  max >= ((n=min ? n : n-min)) cdiv (m-1 + [m=1]) % NEW DECOMP
+Cost =  2:  max >= range + min
+<-- reclaim low_n_m_min_max
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,2,0,0,0,0))
+t(low,max,low,t(0,0,2,0,0,0,0))
+Number of lower bounds:                                             t(0,0,2,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,2,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	17m8.986s
+user	16m58.681s
+sys	0m1.504s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_nval_max of 10
+--------------------------------------------------------------------------------
+--> consult low_n_m_nval_max
+
+Cost =  1:  max >= (n cdiv nval)
+<-- reclaim low_n_m_nval_max
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	0m24.983s
+user	0m14.240s
+sys	0m0.307s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_range_max of 9
+--------------------------------------------------------------------------------
+--> consult low_n_m_range_max
+could not find a formula for min and rmin
+
+Cost =  2:  max >= min + range
+<-- reclaim low_n_m_range_max
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	135m24.163s
+user	134m54.579s
+sys	0m4.096s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_sum_squares_max of 13
+--------------------------------------------------------------------------------
+--> consult low_n_m_sum_squares_max
+
+<-- reclaim low_n_m_sum_squares_max
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	317m28.106s
+user	316m0.957s
+sys	0m29.191s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_sum_squares_min of 9
+--------------------------------------------------------------------------------
+--> consult low_n_m_sum_squares_min
+could not find a formula for rmin
+
+Cost =  3:  min >= (-rmin + n) fdiv m % NEW DECOMP
+<-- reclaim low_n_m_sum_squares_min
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	141m37.117s
+user	140m40.584s
+sys	0m29.578s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_min of 20
+--------------------------------------------------------------------------------
+--> consult low_n_m_min
+Cost =  2:  rmin = (m=1 ? 0 : n)
+----------
+
+Cost =  2:  min >= (m=1 ? n : 0)
+Cost =  2:  min >= (n=rmin ? 0 : n)
+Cost =  1:  min >= n.[rmin=0] % NEW DECOMP
+<-- reclaim low_n_m_min
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,1,0,0,0,0,0))
+t(low,min,low,t(0,3,0,0,0,0,0))
+Number of lower bounds:                                             t(0,3,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,1,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	1m12.086s
+user	0m57.087s
+sys	0m0.292s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_max_min of 9
+--------------------------------------------------------------------------------
+--> consult low_n_m_max_min
+else runtime: 458125ms. else cost: 3
+else runtime: 466744ms. else cost: 3
+Cost =  3:  range = min(m.max - n,max) % NEW DECOMP
+----------
+Cost =  3:  rmin  = min(m.range - range,n)
+----------
+
+Cost =  3:  min >= max(-m.max + max + n,0)
+Cost =  2:  min >= -range + max
+<-- reclaim low_n_m_max_min
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,2,0,0,0,0))
+t(low,min,low,t(0,0,2,0,0,0,0))
+Number of lower bounds:                                             t(0,0,2,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,2,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	86m31.650s
+user	86m10.693s
+sys	0m2.510s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_nval_min of 10
+--------------------------------------------------------------------------------
+--> consult low_n_m_nval_min
+could not find a formula for rmin
+
+Cost =  6:  min >= (m=1 ? n : 0) + [[m=nval] and [m>=2]] % NEW DECOMP
+Cost =  4:  min >= (m+rmin-n=0 ? 1 : n-rmin)
+Cost =  3:  min >= (m=1 ? n : 1) - [n=rmin] % NEW DECOMP
+else runtime: 747ms. else cost: 3
+<-- reclaim low_n_m_nval_min
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,3,0,0,0,0))
+Number of lower bounds:                                             t(0,0,3,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	56m56.873s
+user	56m32.465s
+sys	0m1.989s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_range_min of 9
+--------------------------------------------------------------------------------
+--> consult low_n_m_range_min
+could not find a formula for max and rmin
+
+Cost =  2:  min >= max - range
+<-- reclaim low_n_m_range_min
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	128m19.996s
+user	127m51.014s
+sys	0m2.990s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_nval of 30
+--------------------------------------------------------------------------------
+--> consult low_n_m_nval
+Cost =  2:  min         = (m=1 ? n : 0)
+Cost =  0:  max         = n
+Cost =  2:  range       = (m=1 ? 0 : n)
+Cost =  1:  sum_squares = n^2
+Cost =  0:  mid         = 0
+Cost =  3:  omin        = (m=1 ? 1 : m-1)
+Cost =  0:  omax        = 1
+Cost =  3:  oc          = [n>=2]
+Cost =  1:  oc          = not [n=1]
+Cost =  1:  oc1         = [n=1]
+----------
+Cost =  0:  rmin        = range
+Cost =  0:  omid        = mid
+----------
+
+Cost =  0:  nval >= 1
+<-- reclaim low_n_m_nval
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,12,0,0,0,0,0))
+t(low,nval,low,t(0,1,0,0,0,0,0))
+Number of lower bounds:                                             t(0,1,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,12,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	2m50.089s
+user	2m33.198s
+sys	0m0.947s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_max_nval of 9
+--------------------------------------------------------------------------------
+--> consult low_n_m_max_nval
+
+Cost =  1:  nval >= (n cdiv max)
+<-- reclaim low_n_m_max_nval
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,nval,low,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	0m35.499s
+user	0m14.461s
+sys	0m0.263s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_min_nval of 13
+--------------------------------------------------------------------------------
+--> consult low_n_m_min_nval
+Cost =  2:  rmin = -m.min + n
+----------
+
+Cost =  2:  nval >= (min=0 ? 1 : m)
+<-- reclaim low_n_m_min_nval
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,1,0,0,0,0))
+t(low,nval,low,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,1,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	5m19.789s
+user	5m9.285s
+sys	0m0.953s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_range_nval of 9
+--------------------------------------------------------------------------------
+--> consult low_n_m_range_nval
+
+else runtime: 26369ms. else cost: 6
+Cost =  9:  nval >= min(m, ([range=0] ? n : (-max(range,2) + range + n) cdiv range)) % NEW DECOMP
+<-- reclaim low_n_m_range_nval
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,nval,low,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	11m22.073s
+user	11m15.229s
+sys	0m1.159s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_sum_squares_nval of 9
+--------------------------------------------------------------------------------
+--> consult low_n_m_sum_squares_nval
+
+<-- reclaim low_n_m_sum_squares_nval
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	50m23.406s
+user	50m1.848s
+sys	0m1.168s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_range of 30
+--------------------------------------------------------------------------------
+--> consult low_n_m_range
+Cost =  0:  nval        = m
+Cost =  1:  min         = (n fdiv m)
+Cost =  1:  max         = (n cdiv m)
+Cost =  0:  mid         = 0
+Cost =  1:  rmin        = (n mod m)
+Cost =  2:  omin        = (m-n mod m)
+Cost =  1:  omax        = (n mod m=0 ? m : n mod m)
+Cost =  3:  oc          = (n=<2.m ? n-m : m)
+else runtime: 2821ms. else cost: 3
+Cost =  3:  oc1         = ([2.m=<n] ? 0 : 2.m - n) % NEW DECOMP
+----------
+Cost =  2:  oc1         = (min=1 ? omin : 0)
+----------
+Cost =  0:  omid        = mid
+----------
+could not find a formula for sum_squares
+
+Cost =  9:  range >= [(n mod m)>=1]
+Cost =  7:  range >= not [(n mod m)=0]
+Cost =  2:  range >= (n mod m=0 ? 0 : 1)
+else runtime: 0ms. else cost: 1
+Cost =  2:  range >= [rmin>=1]
+Cost =  0:  range >= not [rmin=0]
+<-- reclaim low_n_m_range
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,11,0,0,0,0,0))
+t(low,range,low,t(0,5,0,0,0,0,0))
+Number of lower bounds:                                             t(0,5,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,11,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	9m52.925s
+user	9m37.964s
+sys	0m1.036s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_max_range of 9
+--------------------------------------------------------------------------------
+--> consult low_n_m_max_range
+else runtime: 41490ms. else cost: 4
+else runtime: 64462ms. else cost: 8
+Cost =  7:  min  = ([n=m.max] ? max : (-max + n) fdiv (m-1)) % NEW DECOMP
+----------
+Cost =  2:  rmin = -m.min + n
+----------
+
+else runtime: 371848ms. else cost: 4
+else runtime: 379095ms. else cost: 4
+Cost =  6:  range >= ([n=m.max] ? 0 : (m.max - n) cdiv (m - 1)) % NEW DECOMP
+Cost =  2:  range >= -min + max
+<-- reclaim low_n_m_max_range
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,2,0,0,0,0))
+t(low,range,low,t(0,0,2,0,0,0,0))
+Number of lower bounds:                                             t(0,0,2,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,2,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	76m4.657s
+user	75m48.381s
+sys	0m2.253s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_min_range of 13
+--------------------------------------------------------------------------------
+--> consult low_n_m_min_range
+Cost =  7:  max  = ((n=min ? n : n-min)) cdiv (m-1 + [m=1]) % NEW DECOMP
+Cost =  2:  rmin = -m.min + n
+----------
+
+else runtime: 346374ms. else cost: 4
+else runtime: 352793ms. else cost: 4
+Cost =  6:  range >= ([n=m.min] ? 0 : (-m.min + n) cdiv (m - 1)) % NEW DECOMP
+Cost =  2:  range >= max - min
+<-- reclaim low_n_m_min_range
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,2,0,0,0,0))
+t(low,range,low,t(0,0,2,0,0,0,0))
+Number of lower bounds:                                             t(0,0,2,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,2,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	17m37.873s
+user	17m31.433s
+sys	0m1.529s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_nval_range of 10
+--------------------------------------------------------------------------------
+--> consult low_n_m_nval_range
+else runtime: 160651ms. else cost: 4
+else runtime: 307392ms. else cost: 4
+Cost =  3:  min  = (m=nval ? n fdiv m : 0) % NEW DECOMP
+Cost =  1:  max  = (n cdiv nval)
+else runtime: 7184ms. else cost: 4
+else runtime: 13195ms. else cost: 4
+Cost =  3:  rmin = (m=nval ? n mod m : n) % NEW DECOMP
+else runtime: 12805ms. else cost: 7
+else runtime: 20861ms. else cost: 7
+Cost =  6:  omin = (m=nval ? m-n mod m : m-nval) % NEW DECOMP
+----------
+Cost =  2:  omin = -min(nval,rmin) + m
+else runtime: 2914ms. else cost: 1
+----------
+
+Cost =  2:  range >= max - min
+<-- reclaim low_n_m_nval_range
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,5,0,0,0,0))
+t(low,range,low,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,5,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	51m16.351s
+user	50m57.708s
+sys	0m1.955s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_sum_squares_range of 8
+--------------------------------------------------------------------------------
+--> consult low_n_m_sum_squares_range
+
+<-- reclaim low_n_m_sum_squares_range
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	45m15.004s
+user	45m0.051s
+sys	0m1.357s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_sum_squares of 30
+--------------------------------------------------------------------------------
+--> consult low_n_m_sum_squares
+Cost =  0:  nval  = m
+Cost =  1:  min   = (n fdiv m)
+Cost =  1:  max   = (n cdiv m)
+Cost =  9:  range = [(n mod m)>=1]
+Cost =  7:  range = not [(n mod m)=0]
+Cost =  2:  range = (n mod m=0 ? 0 : 1)
+Cost =  0:  mid   = 0
+Cost =  1:  rmin  = (n mod m)
+Cost =  2:  omin  = (m-n mod m)
+Cost =  1:  omax  = (n mod m=0 ? m : n mod m)
+Cost =  3:  oc    = (n=<2.m ? n-m : m)
+else runtime: 2525ms. else cost: 3
+Cost =  3:  oc1   = ([2.m=<n] ? 0 : 2.m - n) % NEW DECOMP
+----------
+Cost =  0:  range = not [rmin=0]
+Cost =  2:  oc1   = (min=1 ? omin : 0)
+----------
+Cost =  0:  omid  = mid
+----------
+
+Cost =  3:  sum_squares >= min.rmin + n.min + rmin
+<-- reclaim low_n_m_sum_squares
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,15,0,0,0,0,0))
+t(low,sum_squares,low,t(0,1,0,0,0,0,0))
+Number of lower bounds:                                             t(0,1,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,15,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	12m14.006s
+user	12m8.914s
+sys	0m1.224s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_max_sum_squares of 14
+--------------------------------------------------------------------------------
+--> consult low_n_m_max_sum_squares
+Cost =  4:  nval  = min(m, -max + n + 1) % NEW DECOMP
+else runtime: 49923ms. else cost: 4
+else runtime: 67357ms. else cost: 8
+Cost =  7:  min   = ([n=m.max] ? max : (-max + n) fdiv (m-1)) % NEW DECOMP
+else runtime: 604507ms. else cost: 4
+else runtime: 619986ms. else cost: 4
+Cost =  6:  range = ([n=m.max] ? 0 : (m.max - n) cdiv (m - 1)) % NEW DECOMP
+Cost =  4:  omax  = max(-m.max + m + n,1)
+----------
+Cost =  2:  rmin  = -m.min + n
+----------
+Cost =  5:  omin  = m + range + -rmin.min(rmin,1) - min(rmin,1) % NEW DECOMP
+Cost =  3:  omid  = (range=1 ? 0 : rmin-range)
+----------
+Cost =  6:  mid   = min(omid,1).((min=<3 ? min+1 : 0)) % NEW DECOMP
+Cost =  3:  mid   = (omid=0 ? 0 : min+1)
+----------
+could not find a formula for oc and oc1
+
+Cost =  5:  sum_squares >= range^2 + min.rmin + n.min + rmin - range
+<-- reclaim low_n_m_max_sum_squares
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,9,0,0,0,0))
+t(low,sum_squares,low,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,9,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	955m48.930s
+user	952m2.415s
+sys	0m49.864s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_min_sum_squares of 13
+--------------------------------------------------------------------------------
+--> consult low_n_m_min_sum_squares
+Cost =  3:  nval  = (min=0 ? m-1 : m)
+Cost =  7:  max   = ((n=min ? n : n-min)) cdiv (m-1 + [m=1]) % NEW DECOMP
+else runtime: 289636ms. else cost: 4
+else runtime: 295062ms. else cost: 4
+Cost =  6:  range = ([n=m.min] ? 0 : (-m.min + n) cdiv (m - 1)) % NEW DECOMP
+Cost =  2:  rmin  = -m.min + n
+Cost =  4:  omin  = max(m.min + m - n,1)
+else runtime: 7412ms. else cost: 6
+else runtime: 52240ms. else cost: 15
+else runtime: 2132603ms. else cost: 11
+Cost = 11:  oc    = min([min >= 2] + m - 1,2.[min >= 2] - min - m + n + 1) % NEW DECOMP
+Cost = 10:  oc    = min([min >= 2] - min - m + n + 1,[min >= 2] + m - 1)
+else runtime: 74594ms. else cost: 9
+else runtime: 29645ms. else cost: 7
+else runtime: 73749ms. else cost: 9
+else runtime: 29611ms. else cost: 7
+----------
+Cost =  3:  omin  = (m=<rmin ? 1 : m-rmin)
+----------
+Cost =  2:  oc1   = -oc + nval
+----------
+could not find a formula for mid, omax and omid
+
+<-- reclaim low_n_m_min_sum_squares
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,9,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,9,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	443m34.985s
+user	441m58.744s
+sys	0m13.085s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_nval_sum_squares of 11
+--------------------------------------------------------------------------------
+--> consult low_n_m_nval_sum_squares
+else runtime: 220352ms. else cost: 4
+else runtime: 420476ms. else cost: 4
+Cost =  3:  min   = (m=nval ? n fdiv m : 0) % NEW DECOMP
+Cost =  1:  max   = (n cdiv nval)
+else runtime: 3404ms. else cost: 1
+Cost = 21:  mid   = (min(m-2,0) + [[(m-nval)>=1] and [(n mod nval)>=1]]).(([n mod nval=0] ? 0 : (n fdiv nval))) % NEW DECOMP
+else runtime: 6638ms. else cost: 4
+Cost =  6:  mid   = ([n mod nval=0] ? 0 : (m=nval ? 0 : n fdiv nval)) % NEW DECOMP
+else runtime: 9758ms. else cost: 4
+else runtime: 17993ms. else cost: 4
+Cost =  3:  rmin  = (m=nval ? n mod m : n) % NEW DECOMP
+else runtime: 18291ms. else cost: 7
+else runtime: 30107ms. else cost: 7
+Cost =  6:  omin  = (m=nval ? m-n mod m : m-nval) % NEW DECOMP
+Cost =  1:  omax  = (n mod nval=0 ? nval : n mod nval)
+Cost = 19:  omid  = (min(m-2,0) + [[(m-nval)>=1] and [(n mod nval)>=1]]).(-(n mod nval=0 ? nval : n mod nval) + nval) % NEW DECOMP
+else runtime: 7913ms. else cost: 5
+Cost =  7:  omid  = ([n mod nval=0] ? 0 : (m=nval ? 0 : nval-n mod nval)) % NEW DECOMP
+Cost =  3:  oc    = (n=<2.nval ? n-nval : nval)
+else runtime: 3094ms. else cost: 3
+Cost =  3:  oc1   = ([2.nval=<n] ? 0 : 2.nval - n) % NEW DECOMP
+----------
+Cost =  3:  mid   = (omid=0 ? 0 : max-1)
+Cost =  2:  omin  = -min(nval,rmin) + m
+else runtime: 3458ms. else cost: 1
+----------
+Cost =  2:  range = max - min
+----------
+
+Cost =  3:  sum_squares >= max.omax + n.max - n
+<-- reclaim low_n_m_nval_sum_squares
+
+number of lower bounds for which found at least one formula: 1
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,14,0,0,0,0))
+t(low,sum_squares,low,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,14,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	105m13.185s
+user	104m56.091s
+sys	0m5.324s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table low_n_m_range_sum_squares of 9
+--------------------------------------------------------------------------------
+--> consult low_n_m_range_sum_squares
+
+<-- reclaim low_n_m_range_sum_squares
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	6m9.418s
+user	5m57.438s
+sys	0m0.530s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_max of 30
+--------------------------------------------------------------------------------
+--> consult up_n_m_max
+Cost =  0:  nval        = 1
+Cost =  2:  min         = (m=1 ? n : 0)
+Cost =  2:  range       = (m=1 ? 0 : n)
+Cost =  1:  sum_squares = n^2
+Cost =  0:  mid         = 0
+Cost =  3:  omin        = (m=1 ? 1 : m-1)
+Cost =  3:  oc          = [n>=2]
+Cost =  1:  oc          = not [n=1]
+Cost =  1:  oc1         = [n=1]
+----------
+Cost =  0:  rmin        = range
+Cost =  0:  omax        = nval
+Cost =  0:  omid        = mid
+----------
+
+Cost =  0:  max =< n
+<-- reclaim up_n_m_max
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,12,0,0,0,0,0))
+t(up,max,up,t(0,1,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,1,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,12,0,0,0,0,0)
+
+real	2m39.021s
+user	2m24.833s
+sys	0m0.258s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_min_max of 30
+--------------------------------------------------------------------------------
+--> consult up_n_m_min_max
+Cost =  2:  nval        = (min=0 ? 1 : m)
+Cost =  2:  range       = -m.min + n
+Cost =  0:  mid         = 0
+else runtime: 58ms. else cost: 2
+Cost =  5:  omin        = ([n=m.min] ? m : m - 1) % NEW DECOMP
+else runtime: 27716ms. else cost: 7
+Cost = 13:  oc          = (max(min,2) - min + m) mod (m + 1) + [[min=1] and [(n-m)>=1]] % NEW DECOMP
+Cost =  9:  oc1         = (min=1 ? m : 0) - [[min=1] and [(n-m)>=1]] % NEW DECOMP
+Cost =  8:  oc1         = (-m + [[min=1] and [(n-m)>=1]]).((-1) + [not [min=1]]) % NEW DECOMP
+----------
+Cost =  3:  omin        = (range=0 ? m : m-1)
+Cost =  5:  oc          = (oc1=0 ? nval : (nval-oc1+1) fdiv 2)
+Cost =  3:  oc          = -oc1.min(oc1,1) + nval
+Cost =  2:  oc1         = (min=1 ? omin : 0)
+----------
+Cost =  3:  sum_squares = range^2 + min.range + n.min
+Cost =  0:  rmin        = range
+Cost =  2:  omax        = (range=0 ? m : 1)
+Cost =  0:  omid        = mid
+----------
+
+Cost =  3:  max =< -m.min + min + n
+Cost =  2:  max =< range + min
+<-- reclaim up_n_m_min_max
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,15,0,0,0,0))
+t(up,max,up,t(0,0,2,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,2,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,15,0,0,0,0)
+
+real	972m18.952s
+user	970m41.252s
+sys	0m59.647s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_nval_max of 30
+--------------------------------------------------------------------------------
+--> consult up_n_m_nval_max
+Cost =  6:  min         = (m=1 ? n : 0) + [[m=nval] and [m>=2]] % NEW DECOMP
+Cost = 10:  range       = -nval + [[m=1] or [(m-nval)>=1]] + (m=1 ? 0 : n) % NEW DECOMP
+Cost =  7:  sum_squares = nval^2 - 2.n.nval + n^2 - nval + 2.n
+Cost =  8:  mid         = [[nval>=2] and [(m-nval)>=1]]
+Cost =  1:  mid         = not [[m=nval] or [nval=1]]
+Cost = 12:  omin        = (m=nval ? m : m-nval) - [[m=nval] and [m>=2] and [(n-m)>=1]] % NEW DECOMP
+else runtime: 4301ms. else cost: 6
+Cost =  7:  omin        = ([n=nval] ? n : (m=nval ? max(m-1,1) : m-nval)) % NEW DECOMP
+Cost =  2:  omax        = (n=nval ? n : 1)
+Cost =  3:  omid        = (m=nval ? 0 : nval-1)
+Cost =  5:  oc          = [(n-nval)>=1]
+Cost =  0:  oc          = not [n=nval]
+Cost =  3:  oc1         = (n=nval ? n : nval-1)
+----------
+Cost =  5:  sum_squares = oc1^2 - 2.n.oc1 + n^2 + oc1
+Cost =  2:  omid        = (m-oc1=<1 ? 0 : oc1)
+----------
+Cost =  2:  rmin        = omid + range
+----------
+
+Cost =  3:  max =< -nval + n + 1
+Cost =  3:  max =< (n=oc1 ? 1 : n-oc1)
+Cost =  2:  max =< range + min
+<-- reclaim up_n_m_nval_max
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,15,0,0,0,0))
+t(up,max,up,t(0,0,3,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,3,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,15,0,0,0,0)
+
+real	276m36.416s
+user	273m46.274s
+sys	2m34.781s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_range_max of 9
+--------------------------------------------------------------------------------
+--> consult up_n_m_range_max
+Cost = 13:  min  = ([[n>=3] and [(n-range)=1]] ? 0 : n-range) fdiv m % NEW DECOMP
+----------
+Cost =  2:  rmin = -m.min + n
+----------
+
+else runtime: 248977ms. else cost: 4
+else runtime: 255411ms. else cost: 4
+Cost =  4:  max =< (m.range - range + n) fdiv m % NEW DECOMP
+Cost =  2:  max =< min + range
+<-- reclaim up_n_m_range_max
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,2,0,0,0,0))
+t(up,max,up,t(0,0,2,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,2,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,2,0,0,0,0)
+
+real	60m49.441s
+user	60m35.236s
+sys	0m1.905s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_sum_squares_max of 9
+--------------------------------------------------------------------------------
+--> consult up_n_m_sum_squares_max
+
+<-- reclaim up_n_m_sum_squares_max
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	175m32.658s
+user	175m20.594s
+sys	0m6.042s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_min of 20
+--------------------------------------------------------------------------------
+--> consult up_n_m_min
+Cost =  0:  nval = m
+Cost =  1:  rmin = (n mod m)
+----------
+
+Cost =  1:  min =< (n fdiv m)
+<-- reclaim up_n_m_min
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,2,0,0,0,0,0))
+t(up,min,up,t(0,1,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,1,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,2,0,0,0,0,0)
+
+real	0m44.283s
+user	0m29.346s
+sys	0m0.329s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_max_min of 9
+--------------------------------------------------------------------------------
+--> consult up_n_m_max_min
+else runtime: 404176ms. else cost: 4
+else runtime: 412490ms. else cost: 4
+Cost =  6:  range = ([n=m.max] ? 0 : (m.max - n) cdiv (m - 1)) % NEW DECOMP
+----------
+could not find a formula for rmin
+
+else runtime: 42635ms. else cost: 4
+else runtime: 65735ms. else cost: 8
+Cost =  7:  min =< ([n=m.max] ? max : (-max + n) fdiv (m-1)) % NEW DECOMP
+Cost =  2:  min =< -range + max
+<-- reclaim up_n_m_max_min
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,1,0,0,0,0))
+t(up,min,up,t(0,0,2,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,2,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,1,0,0,0,0)
+
+real	93m9.072s
+user	92m58.254s
+sys	0m2.053s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_nval_min of 10
+--------------------------------------------------------------------------------
+--> consult up_n_m_nval_min
+else runtime: 8659ms. else cost: 4
+else runtime: 15900ms. else cost: 4
+Cost =  3:  rmin = (m=nval ? n mod m : n) % NEW DECOMP
+----------
+
+else runtime: 195578ms. else cost: 4
+else runtime: 371745ms. else cost: 4
+Cost =  3:  min =< (m=nval ? n fdiv m : 0) % NEW DECOMP
+Cost =  3:  min =< (n=rmin ? 0 : n fdiv m)
+<-- reclaim up_n_m_nval_min
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,1,0,0,0,0))
+t(up,min,up,t(0,0,2,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,2,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,1,0,0,0,0)
+
+real	16m59.153s
+user	16m54.804s
+sys	0m1.450s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_range_min of 9
+--------------------------------------------------------------------------------
+--> consult up_n_m_range_min
+else runtime: 255866ms. else cost: 4
+else runtime: 262465ms. else cost: 4
+Cost =  4:  max  = (m.range - range + n) fdiv m % NEW DECOMP
+----------
+could not find a formula for rmin
+
+Cost = 13:  min =< ([[n>=3] and [(n-range)=1]] ? 0 : n-range) fdiv m % NEW DECOMP
+Cost =  3:  min =< (-range + n) fdiv m
+Cost =  2:  min =< max - range
+<-- reclaim up_n_m_range_min
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,1,0,0,0,0))
+t(up,min,up,t(0,0,3,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,3,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,1,0,0,0,0)
+
+real	60m53.290s
+user	60m44.080s
+sys	0m1.296s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_sum_squares_min of 13
+--------------------------------------------------------------------------------
+--> consult up_n_m_sum_squares_min
+could not find a formula for rmin
+
+Cost =  3:  min =< (-rmin + n) fdiv m % NEW DECOMP
+<-- reclaim up_n_m_sum_squares_min
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	236m17.751s
+user	235m38.223s
+sys	0m26.725s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_nval of 20
+--------------------------------------------------------------------------------
+--> consult up_n_m_nval
+
+Cost =  0:  nval =< m
+<-- reclaim up_n_m_nval
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,1,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,1,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	0m7.794s
+user	0m4.818s
+sys	0m0.149s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_max_nval of 9
+--------------------------------------------------------------------------------
+--> consult up_n_m_max_nval
+
+Cost =  4:  nval =< min(m, -max + n + 1) % NEW DECOMP
+<-- reclaim up_n_m_max_nval
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	2m46.304s
+user	2m43.337s
+sys	0m0.420s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_min_nval of 13
+--------------------------------------------------------------------------------
+--> consult up_n_m_min_nval
+Cost =  2:  rmin = -m.min + n
+----------
+
+Cost =  3:  nval =< (min=0 ? m-1 : m)
+Cost =  1:  nval =< m - [min=0] % NEW DECOMP
+<-- reclaim up_n_m_min_nval
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,1,0,0,0,0))
+t(up,nval,up,t(0,0,2,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,2,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,1,0,0,0,0)
+
+real	4m16.884s
+user	4m13.544s
+sys	0m0.844s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_range_nval of 9
+--------------------------------------------------------------------------------
+--> consult up_n_m_range_nval
+
+else runtime: 5388ms. else cost: 3
+else runtime: 5355ms. else cost: 3
+<-- reclaim up_n_m_range_nval
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	154m42.714s
+user	154m19.227s
+sys	0m6.609s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_sum_squares_nval of 9
+--------------------------------------------------------------------------------
+--> consult up_n_m_sum_squares_nval
+
+<-- reclaim up_n_m_sum_squares_nval
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	139m41.200s
+user	139m23.593s
+sys	0m3.969s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_range of 30
+--------------------------------------------------------------------------------
+--> consult up_n_m_range
+Cost =  0:  nval        = 1
+Cost =  2:  min         = (m=1 ? n : 0)
+Cost =  0:  max         = n
+Cost =  1:  sum_squares = n^2
+Cost =  0:  mid         = 0
+Cost =  2:  rmin        = (m=1 ? 0 : n)
+Cost =  3:  omin        = (m=1 ? 1 : m-1)
+Cost =  3:  oc          = [n>=2]
+Cost =  1:  oc          = not [n=1]
+Cost =  1:  oc1         = [n=1]
+----------
+Cost =  0:  omax        = nval
+Cost =  0:  omid        = mid
+----------
+
+Cost =  0:  range =< rmin
+<-- reclaim up_n_m_range
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,12,0,0,0,0,0))
+t(up,range,up,t(0,1,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,1,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,12,0,0,0,0,0)
+
+real	2m11.571s
+user	2m8.427s
+sys	0m0.254s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_max_range of 9
+--------------------------------------------------------------------------------
+--> consult up_n_m_max_range
+Cost =  3:  min  = max(-m.max + max + n,0)
+----------
+Cost =  2:  rmin = -m.min + n
+----------
+
+else runtime: 429868ms. else cost: 3
+else runtime: 436963ms. else cost: 3
+Cost =  3:  range =< min(m.max - n,max) % NEW DECOMP
+Cost =  2:  range =< -min + max
+<-- reclaim up_n_m_max_range
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,2,0,0,0,0))
+t(up,range,up,t(0,0,2,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,2,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,2,0,0,0,0)
+
+real	68m34.928s
+user	68m14.167s
+sys	0m5.952s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_min_range of 30
+--------------------------------------------------------------------------------
+--> consult up_n_m_min_range
+Cost =  2:  nval        = (min=0 ? 1 : m)
+Cost =  3:  max         = -m.min + min + n
+Cost =  0:  mid         = 0
+Cost =  2:  rmin        = -m.min + n
+else runtime: 57ms. else cost: 2
+Cost =  5:  omin        = ([n=m.min] ? m : m - 1) % NEW DECOMP
+else runtime: 25402ms. else cost: 7
+Cost = 13:  oc          = (max(min,2) - min + m) mod (m + 1) + [[min=1] and [(n-m)>=1]] % NEW DECOMP
+Cost =  9:  oc1         = (min=1 ? m : 0) - [[min=1] and [(n-m)>=1]] % NEW DECOMP
+Cost =  8:  oc1         = (-m + [[min=1] and [(n-m)>=1]]).((-1) + [not [min=1]]) % NEW DECOMP
+----------
+Cost =  5:  oc          = (oc1=0 ? nval : (nval-oc1+1) fdiv 2)
+Cost =  3:  oc          = -oc1.min(oc1,1) + nval
+Cost =  2:  oc1         = (min=1 ? omin : 0)
+----------
+Cost =  3:  sum_squares = max^2 - min.max + n.min
+else runtime: 16284ms. else cost: 2
+else runtime: 18884ms. else cost: 2
+Cost =  2:  omax        = (m=omin ? m : 1)
+Cost =  0:  omid        = mid
+----------
+
+Cost =  0:  range =< rmin
+<-- reclaim up_n_m_min_range
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,14,0,0,0,0))
+t(up,range,up,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,14,0,0,0,0)
+
+real	1006m2.208s
+user	998m16.290s
+sys	4m33.602s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_nval_range of 30
+--------------------------------------------------------------------------------
+--> consult up_n_m_nval_range
+Cost =  6:  min         = (m=1 ? n : 0) + [[m=nval] and [m>=2]] % NEW DECOMP
+Cost =  3:  max         = -nval + n + 1
+Cost =  7:  sum_squares = nval^2 - 2.n.nval + n^2 - nval + 2.n
+Cost =  8:  mid         = [[nval>=2] and [(m-nval)>=1]]
+Cost =  1:  mid         = not [[m=nval] or [nval=1]]
+Cost = 12:  omin        = (m=nval ? m : m-nval) - [[m=nval] and [m>=2] and [(n-m)>=1]] % NEW DECOMP
+else runtime: 4425ms. else cost: 6
+Cost =  7:  omin        = ([n=nval] ? n : (m=nval ? max(m-1,1) : m-nval)) % NEW DECOMP
+Cost =  2:  omax        = (n=nval ? n : 1)
+Cost =  3:  omid        = (m=nval ? 0 : nval-1)
+Cost =  5:  oc          = [(n-nval)>=1]
+Cost =  0:  oc          = not [n=nval]
+Cost =  3:  oc1         = (n=nval ? n : nval-1)
+----------
+Cost =  3:  sum_squares = max^2 + nval - 1
+Cost =  2:  omid        = (m-oc1=<1 ? 0 : oc1)
+----------
+could not find a formula for rmin
+
+else runtime: 98223ms. else cost: 12
+else runtime: 211465ms. else cost: 14
+Cost = 13:  range =< ([m=1] ? 0 : (nval=1 ? n : n-nval) + [[nval>=2] and [(m-nval)>=1]]) % NEW DECOMP
+Cost =  2:  range =< max - min
+Cost =  2:  range =< (max=<rmin ? max : rmin)
+Cost =  1:  range =< min(max,rmin)
+<-- reclaim up_n_m_nval_range
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,14,0,0,0,0))
+t(up,range,up,t(0,0,4,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,4,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,14,0,0,0,0)
+
+real	355m16.307s
+user	351m36.043s
+sys	2m57.989s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_sum_squares_range of 8
+--------------------------------------------------------------------------------
+--> consult up_n_m_sum_squares_range
+
+<-- reclaim up_n_m_sum_squares_range
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	52m15.856s
+user	52m6.264s
+sys	0m1.675s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_max_sum_squares of 30
+--------------------------------------------------------------------------------
+--> consult up_n_m_max_sum_squares
+Cost =  1:  nval  = (n cdiv max)
+Cost =  3:  min   = max(-m.max + max + n,0)
+else runtime: 3627046ms. else cost: 3
+Cost =  3:  range = min(m.max - n,max) % NEW DECOMP
+Cost =  1:  omax  = (n fdiv max)
+else runtime: 3486003ms. else cost: 4
+Cost =  6:  omid  = ([n mod max=0] ? 0 : [(m.max - max - n - 1) >= 0]) % NEW DECOMP
+else runtime: 49619ms. else cost: 3
+else runtime: 111916ms. else cost: 6
+Cost =  7:  oc    = ([n=max] ? [n>=2] : ([max=1] ? [n=1] : (n-1) cdiv max)) % NEW DECOMP
+Cost =  4:  oc    = (max=1 ? 0 : (max+n-2) fdiv max)
+else runtime: 59323ms. else cost: 8
+else runtime: 120588ms. else cost: 11
+Cost = 10:  oc1   = ([max=1] ? n : [(n mod max)=1]) % NEW DECOMP
+----------
+Cost =  2:  min   = -range + max
+Cost =  2:  range = -min + max
+Cost =  2:  oc    = -oc1 + nval
+Cost =  5:  oc1   = (oc=0 ? nval : (nval-oc+1) fdiv 2)
+Cost =  3:  oc1   = -oc.min(oc,1) + nval
+----------
+Cost =  2:  rmin  = -m.min + n
+Cost =  5:  omin  = -omid + (m=omax ? m : m-omax) % NEW DECOMP
+----------
+could not find a formula for mid
+
+Cost =  3:  sum_squares =< (n mod max)^2 - max.(n mod max) + n.max
+<-- reclaim up_n_m_max_sum_squares
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,15,0,0,0,0))
+t(up,sum_squares,up,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,15,0,0,0,0)
+
+real	3408m13.217s
+user	3390m51.254s
+sys	8m9.507s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_sum_squares of 30
+--------------------------------------------------------------------------------
+--> consult up_n_m_sum_squares
+Cost =  0:  nval  = 1
+Cost =  2:  min   = (m=1 ? n : 0)
+Cost =  0:  max   = n
+Cost =  2:  range = (m=1 ? 0 : n)
+Cost =  0:  mid   = 0
+Cost =  3:  omin  = (m=1 ? 1 : m-1)
+Cost =  3:  oc    = [n>=2]
+Cost =  1:  oc    = not [n=1]
+Cost =  1:  oc1   = [n=1]
+----------
+Cost =  0:  rmin  = range
+Cost =  0:  omax  = nval
+Cost =  0:  omid  = mid
+----------
+
+Cost =  1:  sum_squares =< n^2
+Cost =  1:  sum_squares =< max(min,range)^2
+<-- reclaim up_n_m_sum_squares
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,12,0,0,0,0,0))
+t(up,sum_squares,up,t(0,2,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,2,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,12,0,0,0,0,0)
+
+real	1m28.251s
+user	1m17.895s
+sys	0m0.415s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+slurmstepd: error: *** JOB 65459008 ON cdr803 CANCELLED AT 2023-04-21T04:56:30 DUE TO TIME LIMIT ***
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_min_sum_squares of 30
+--------------------------------------------------------------------------------
+--> consult up_n_m_min_sum_squares
+Cost =  2:  nval  = (min=0 ? 1 : m)
+Cost =  3:  max   = -m.min + min + n
+Cost =  2:  range = -m.min + n
+Cost =  0:  mid   = 0
+else runtime: 59ms. else cost: 2
+Cost =  5:  omin  = ([n=m.min] ? m : m - 1) % NEW DECOMP
+else runtime: 27376ms. else cost: 7
+Cost = 13:  oc    = (max(min,2) - min + m) mod (m + 1) + [[min=1] and [(n-m)>=1]] % NEW DECOMP
+Cost =  9:  oc1   = (min=1 ? m : 0) - [[min=1] and [(n-m)>=1]] % NEW DECOMP
+Cost =  8:  oc1   = (-m + [[min=1] and [(n-m)>=1]]).((-1) + [not [min=1]]) % NEW DECOMP
+----------
+Cost =  2:  max   = range + min
+Cost =  3:  omin  = (range=0 ? m : m-1)
+Cost =  5:  oc    = (oc1=0 ? nval : (nval-oc1+1) fdiv 2)
+Cost =  3:  oc    = -oc1.min(oc1,1) + nval
+Cost =  2:  oc1   = (min=1 ? omin : 0)
+----------
+Cost =  0:  rmin  = range
+Cost =  2:  omax  = (range=0 ? m : 1)
+Cost =  0:  omid  = mid
+----------
+
+Cost =  3:  sum_squares =< max^2 - min.max + n.min
+else runtime: 17335ms. else cost: 2
+else runtime: 20018ms. else cost: 2
+<-- reclaim up_n_m_min_sum_squares
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,16,0,0,0,0))
+t(up,sum_squares,up,t(0,0,1,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,1,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,16,0,0,0,0)
+
+real	1038m50.097s
+user	1034m12.109s
+sys	4m6.239s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_nval_sum_squares of 30
+--------------------------------------------------------------------------------
+--> consult up_n_m_nval_sum_squares
+Cost =  6:  min   = (m=1 ? n : 0) + [[m=nval] and [m>=2]] % NEW DECOMP
+Cost =  3:  max   = -nval + n + 1
+Cost = 10:  range = -nval + [[m=1] or [(m-nval)>=1]] + (m=1 ? 0 : n) % NEW DECOMP
+Cost =  8:  mid   = [[nval>=2] and [(m-nval)>=1]]
+Cost =  1:  mid   = not [[m=nval] or [nval=1]]
+Cost = 12:  omin  = (m=nval ? m : m-nval) - [[m=nval] and [m>=2] and [(n-m)>=1]] % NEW DECOMP
+else runtime: 4305ms. else cost: 6
+Cost =  7:  omin  = ([n=nval] ? n : (m=nval ? max(m-1,1) : m-nval)) % NEW DECOMP
+Cost =  2:  omax  = (n=nval ? n : 1)
+Cost =  3:  omid  = (m=nval ? 0 : nval-1)
+Cost =  5:  oc    = [(n-nval)>=1]
+Cost =  0:  oc    = not [n=nval]
+Cost =  3:  oc1   = (n=nval ? n : nval-1)
+----------
+Cost =  5:  min   = (range=0 ? max : (max-range+1) fdiv 2)
+Cost =  3:  min   = -range.min(range,1) + max
+Cost =  2:  max   = range + min
+Cost =  2:  omid  = (m-oc1=<1 ? 0 : oc1)
+----------
+Cost =  2:  rmin  = omid + range
+----------
+
+Cost =  7:  sum_squares =< nval^2 - 2.n.nval + n^2 - nval + 2.n
+Cost =  3:  sum_squares =< max^2 + nval - 1
+<-- reclaim up_n_m_nval_sum_squares
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 1
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,17,0,0,0,0))
+t(up,sum_squares,up,t(0,0,2,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,2,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,17,0,0,0,0)
+
+real	275m1.605s
+user	272m49.800s
+sys	2m3.026s
+SICStus 4.7.1 (x86_64-linux-glibc2.17): Fri Jan 21 10:45:10 PST 2022
+Licensed to JovialPersonal
+
+
+--------------------------------------------------------------------------------
+Handle table up_n_m_range_sum_squares of 9
+--------------------------------------------------------------------------------
+--> consult up_n_m_range_sum_squares
+
+<-- reclaim up_n_m_range_sum_squares
+
+number of lower bounds for which found at least one formula: 0
+
+number of upper bounds for which found at least one formula: 0
+
+number of lower bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+number of upper bounds for which try to find a formula: 25
+dispatched by number of parameters: 0  5  20
+
+t(low,nval,low,t(0,0,0,0,0,0,0))
+t(low,nval,secondary,t(0,0,0,0,0,0,0))
+t(low,min,low,t(0,0,0,0,0,0,0))
+t(low,min,secondary,t(0,0,0,0,0,0,0))
+t(low,max,low,t(0,0,0,0,0,0,0))
+t(low,max,secondary,t(0,0,0,0,0,0,0))
+t(low,range,low,t(0,0,0,0,0,0,0))
+t(low,range,secondary,t(0,0,0,0,0,0,0))
+t(low,sum_squares,low,t(0,0,0,0,0,0,0))
+t(low,sum_squares,secondary,t(0,0,0,0,0,0,0))
+t(up,nval,up,t(0,0,0,0,0,0,0))
+t(up,nval,secondary,t(0,0,0,0,0,0,0))
+t(up,min,up,t(0,0,0,0,0,0,0))
+t(up,min,secondary,t(0,0,0,0,0,0,0))
+t(up,max,up,t(0,0,0,0,0,0,0))
+t(up,max,secondary,t(0,0,0,0,0,0,0))
+t(up,range,up,t(0,0,0,0,0,0,0))
+t(up,range,secondary,t(0,0,0,0,0,0,0))
+t(up,sum_squares,up,t(0,0,0,0,0,0,0))
+t(up,sum_squares,secondary,t(0,0,0,0,0,0,0))
+Number of lower bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with a lower bound:  t(0,0,0,0,0,0,0)
+Number of upper bounds:                                             t(0,0,0,0,0,0,0)
+Number of secondary characteristics associated with an upper bound: t(0,0,0,0,0,0,0)
+
+real	5m30.312s
+user	5m26.732s
+sys	0m0.385s

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>README</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="description-of-the-generated-objects">Description of the generated objects</h2>
+<blockquote>
+<p>The files insides this directory are used to generate three combinatorials objects, namely :</p>
+</blockquote>
+<ol>
+<li>forest with isolated vertices noted <em>forest</em></li>
+<li>forest without isolated vertices noted <em>forest0</em></li>
+<li>tree noted <em>tree</em></li>
+</ol>
+<blockquote>
+<p>The goal of thoses scripts is to generate instances (in SICStus prolog format) for three combinatorial objects where one of their characteristics are optimal acccording to their values. As examples of characteristics, we have the greatest depth of a node noted <em>maxp</em>, the number of leaves noted <em>f</em> or the number of nodes noted <em>v</em> and etc…</p>
+</blockquote>
+<blockquote>
+<p>The main method used to generate those objects is a dedicated algorithm of <a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">Donald E. Knuth</a> stated Algorithm O (<em>Oriented forest</em>) of his book titled <em>Art of Computer Programming, Volume 4, Fascicle 4, Generating All Trees, History of Combinatorial Generation</em></p>
+</blockquote>
+<h2 id="command-lines-to-generate-the-objects">Command lines to generate the objects</h2>
+<h3 id="dependencies">Dependencies</h3>
+<blockquote>
+<p>The programs <a href="https://www.python.org/downloads/"><code>python3</code></a> should be installed.</p>
+</blockquote>
+<h3 id="preparation-for-running-the-files-to-generate-the-combinatorials-objects.">Preparation for running the files to generate the combinatorials objects.</h3>
+<h3 id="running-the-program-to-generate-the-combinatorial-objects">Running the program to generate the combinatorial objects</h3>
+<blockquote>
+<p>To generate the combinatorial object <em>forest</em>, <em>forest0</em>, or <em>tree</em>,  you just need to respectively run in the Terminal the scripts below:</p>
+</blockquote>
+<p><code>python3 gen_forest.py maximum_size_of_the_combinatorial_object</code></p>
+<p><code>python3 gen_forest0.py maximum_size_of_the_combinatorial_object</code></p>
+<p><code>python3 gen_tree.py maximum_size_of_the_combinatorial_object</code></p>
+<h3 id="results-of-running-the-scripts-above">Results of running the scripts above</h3>
+<blockquote>
+<p>After running the scripts above, the generated objects which have extremal values of their caracteristics and no more than <code>maximum_size_of_the_combinatorial_object</code>  vertices are stored in the directory named <em>data_object</em> where object is respectively  <em>forest</em>, <em>forest0</em>, or <em>tree</em>.</p>
+</blockquote>
+</div>
+</body>
+
+</html>

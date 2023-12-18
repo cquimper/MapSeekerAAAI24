@@ -1,0 +1,281 @@
+Warning: should only consult tables from main files (not from modules)
+
+A. main files
+-------------
+
+A1. gen_data.pl (not used in ASSISTANT)
+.......................................
+In the context of digraphs generate the different tables.
+. When KeepOnlySecondaryWithFD=1 keep only those secondary characteristics
+  which are functionally determined by the input characteristics and generates
+  all tables up to a certain maximum number of vertices.
+  Produce the file tables.pl, a module containing the service get_tables/4 and
+  the a set of table/5 facts with the names of the generated tables.
+
+  Call top(25,0) for generating tables of size 25.
+  
+. When KeepOnlySecondaryWithFD=0 then keep all secondary characteristics
+  but generate just the table corresponding to the maximum size (as tables can get quite big).
+  Produce the file tablestransfer.pl, a module containing the service get_tables/4 and the set
+  of table/5 facts with the names of the generated tables.
+
+  Call top(26,1) for generating tables up to size 26.
+
+
+A2. gen_metadata.pl
+...................
+Both in the context of digraphs and in the context of ASSISTANT,
+generates the metadata files associated with each table.
+A metadata file name is the concactenation of the name of the file containing the table
+and the suffix "_metadata".
+
+ Call top(26) in the context of digraphs (use the same size that was used in gen_data.pl).
+ Call top(0)  in the context of ASSISTANT
+
+
+A3. gen_meta_metadata.pl (not used in ASSISTANT)
+........................
+
+Computes from the generated metadata files the size (i.e. the maximum number of vertices
+to use) in order to acquire a conjecture.
+
+ Call top(26) (use the same size that was used in gen_data.pl).
+
+
+A4. check_generated_data.pl (not used in ASSISTANT)
+...........................
+
+Check the monotonicity of each bound wrt the biggest generated size,
+and generate the found_problems.tex file to report the table, table size,
+and table entries for which a problem was found.
+The list of tables for which their is a problem is then copied in gen_candidate_tables.pl
+in order to blacklist invalid tables.
+
+ Call top(26) (use the same size that was used in gen_data.pl).
+
+
+A5. main.pl
+...........
+
+Acquire the conjectures or the constraints of a model.
+Uses the module gen_candidate_tables.pl to get the tables for which generate conjectures.
+As the result of the computation, it generates the following information:
+(1) all found conjectures in a textual form in the console,
+(2) all found conjectures as Prolog facts in found_conjectures.pl,
+(3) an execution trace in a textual form in the console.
+
+ Call top(0) in the context of ASSISTANT.
+ Call top(1) in the context of digraphs: generate conjectures and check them wrt largest table size.
+ Call transfer_learning in the context of digraphs for learning conjectures
+ by transfer learning from already acquired conjectures.
+ 
+For those combinations of input characteristics for which could not acquire any conjecture
+check that a conjecture that was acquired for an other combination of parameters (for the
+same map) holds or not. For this purpose it uses the tables in which the secondary characteristics
+that are not functionally determined by the input characteristics were not removed as well as
+the conjectures (see found_conjectures.pl) that were generated.
+It write the results in the console.
+
+A6. draw.pl
+...........
+
+ Utility for drawing a map by minimising the intersection between line-segments.
+
+A7. constraint_check.pl
+.......................
+ This file generates rules that are later written in files found_condpairs_family1_sym.pl,
+ found_condpairs_family2_sym.pl and found_condpairs_family3_new.pl. These rules are generated
+ by stating a constraint model and then solving it.
+ 
+ Instruction to generate rules for forbid_specific_combinations_of_conds_generated.pl:
+ 
+  Step 0: (optional) adjust domain facts in constraint_check_condition_generation.pl
+  
+  Step 1: comment lines ':- use_module(found_condpairs_family1_symf3).' and
+          ':- use_module(found_condpairs_family2_symf3).' the beginning of the file
+          
+  Step 2: run 'top.' predicate
+  
+  Step 3: restart Sicstus PROLOG. Uncomment ':- use_module(found_condpairs_family1_symf3).' and
+                                            ':- use_module(found_condpairs_family2_symf3).'
+                                            
+  Step 4: run 'top(3).' predicate OR run predicates 'top(31).', 'top(33).', 'top(35).'
+          and 'top(37).' in parallel and then combine rules from four .pl files by hand in
+          one file 'found_condpairs_family3_new.pl'. The second approach saves a lot of time.
+
+A8. convert_to_mathml.pl
+........................
+ An utility to generate an html-file that contains all found conjectures from
+ an internal prolog format to MathML format. 
+
+
+
+B. module files
+---------------
+
+B1. gen_candidates_tables.pl (not used in ASSISTANT)
+............................
+ Generate the table names corresponding to different combination of input characteristics
+ and bound characteristics. This is the program to modify if you want to control which
+ table names are generated (see KindBound and NParam).
+ The list of corrupted tables needs to be updated if consider new maps or new characteristics.
+
+ Called by main.pl as well as by transfer_learning.pl 
+
+
+B2. gen_options_for_formulae.pl
+...............................
+ Generate a list options to specify which candidate formulae should be generated with which set of parameters
+
+
+B3. utility.pl
+..............
+ List of Prolog utilities.
+
+
+B4. gen_formula.pl
+..................
+ Provide some services for:
+  . generating a parameterised candidate formula wrt some given options,
+    and on backtracking produce the next candidate formula.
+  . generating the equational constraints wrt to all table entries
+  . writing a formula on the console
+  . creating a term corresponding to a formula
+
+ Called by main.pl
+ 
+B5. gen_bool_formula.pl
+.......................
+ Provides predicates needed to generate constraint model for acquisition of
+ arithemtic-Boolean formulae, with additional constraints
+ to break symmetries.
+ 
+B6. gen_cond_formula.pl
+.......................
+ Provides predicates needed to generate constraint model for acquisition of
+ conditional formulae, with additional constraints
+ to break symmetries.
+
+B7. gen_poly_formula.pl
+.......................
+ Provides predicates needed to generate constraint model for acquisition of
+ polynomial formulae with binary and unary terms, with additional constraints
+ to break symmetries.
+
+B8. bool_cond_utility.pl
+........................
+ List of utility predicates used for generation of Boolean and conditional formulae.
+ Called by gen_formula.pl, gen_bool_formulae.pl, gen_cond_formula.pl
+
+B9. forbid_specific_combinations_of_conds_generated.pl
+......................................................
+ generation of constraints to prevent simplifiable arithemtic-Boolean formulae.
+ These constraints are created from generated rules from found_condpairs_family1_sym.pl,
+ found_condpairs_family2_sym.pl and found_condpairs_family3_new.pl
+ Called by gen_bool_formula.pl (if enabled by the user)
+ 
+B10. forbid_specific_combinations_of_conds.pl
+.............................................
+ generation of constraints to prevent simplifiable arithemtic-Boolean formulae.
+ These constraints are handwritten.
+ Called by gen_bool_formula.pl (if enambled by the user)
+
+B11. constraint_check_condition_generation.pl
+.............................................
+ Contains constraints for individual conditions and hypotheses that are used by constraint_check.pl
+ Contains lower and upperbounds of domains of attributes for conditions. If the user wishes
+ to change them he must change PROLOG facts:
+  attribute1_min(1).
+  attribute1_max(15). %default for families 1 and 2: 100  ; default for family 3: 15
+  attribute2_min(1).
+  attribute2_max(15). %default for families 1 and 2: 100  ; default for family 3: 15
+  coef_min(0).
+  coef_max(40).       %default for families 1 and 2: 1000  ; default for family 3: 40
+
+B12. gen_clusters_val_fds
+.........................
+ generates lists of conditional functional dependencies and their corresponding value clusters. Later
+ these lists are combined into a prefix tree of conditional functional dependencies. Required for the
+ search of case formulae.
+ Called by gen_options_for_formulae.pl
+ 
+B13. table_access.pl
+....................
+ Provide a set of primitives for accessing to the metadata information
+ in the metadata tables. This file needs to be carefully update each time
+ we provide some new metadata.
+
+B14. eval_formula.pl (not used by ASSISTANT)
+....................
+ contains utilities to verify a found conjecture on a table with a higher MaxN.
+
+B15. tables_assistant.pl  (only used in ASSISTANT)
+........................
+ Set of tables used in ASSISTANT (renames it as tables.pl to use them).
+
+
+C. generated files
+------------------
+
+C1. tables.pl            (module)
+.............
+ Set of tables used in map (generated by gen_data.pl or directly in the case of ASSISTANT)
+
+
+C2. tablestransfer.pl    (module) (not used in ASSISTANT)
+.....................
+ Set of tables where keep all secondary characteristics (generated by gen_data.pl)
+
+
+C3. meta_metadata.pl     (module) (not used in ASSISTANT)
+....................
+ Set of tables which indicate which size to use
+ when we acquire a conjecture.  (generated by gen_meta_metadata.pl)
+
+
+C4. found_conjectures_(map name).pl (facts)
+........................
+ Set of conjectures facts generated by main.pl
+
+
+C5. transfer_results.tex (conjectures that could be transfered)
+........................
+ Show in a text file which conjectures could be transfered
+ to some combination of characteristics for which could not
+ acquire any conjecture (generated by transfer_learning.pl
+ as a text on the console, which is then copied)
+
+
+C6. found_problems.tex   (wrong table entries)  (not used in ASSISTANT)
+......................
+ Contains the list of tables (and table entries) for which 
+ check_generated_data.pl found a problem when checking the
+ monotonicity of each bound wrt the biggest generated size.
+ 
+C7. found_condpairs_family1_sym.pl,
+    found_condpairs_family2_sym.pl,
+    found_condpairs_family3_new.pl   (facts)
+..................................
+ Contain rules generated by constraint_check.pl. These rules
+ are aimed to prevent generation of simplifiable Boolean
+ formulae and called by forbid_specific_combinations_of_conds_generated.pl
+ NOTE: additional found_condpairs_*.pl files can be created to generate
+ found_condpairs_family3_new.pl file. They aren't required for the
+ forbid_specific_combinations_of_conds_generated.pl to work so they could be
+ deleted safely. Only this three files must be kept
+
+
+D. directories
+--------------
+
+D1. data
+........
+In the context of digraphs:
+Contain all the tables (both the one where the secondary characteristics are functionally determined by the input characteristics, and the other tables where this is not necessary the case). We have one subdirectory for each maximum number of vertices.
+
+In the context of ASSISTANT:
+The tables from which we acquire a model.
+
+D2. data_empty
+..............
+In the context of graphs allows to restart the generation process from an empty set of table: copy data_empty as data and restart the generation of the tables.
